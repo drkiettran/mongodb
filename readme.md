@@ -13,7 +13,7 @@ cause trouble for loading the airports.csv into MongoDB. Recommend to replace it
 quote (').
 
 ```
-cd ~/dev/airline
+cd ~/cisc_525/airline
 mongoimport --db airline --collection planes --type csv --headerline --file ./plane-data.csv
 mongoimport --db airline --collection carriers --type csv --headerline --file ./carriers.csv
 mongoimport --db airline --collection airports --type csv --headerline --file ./airports.csv
