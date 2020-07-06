@@ -8,6 +8,10 @@ http://stat-computing.org/dataexpo/2009/supplemental-data.html
 
 ## Import data into collections
 
+Note: at line 1253 of airports.csv file, there are two double quotes ("). These will 
+cause trouble for loading the airports.csv into MongoDB. Recommend to replace it with single
+quote (').
+
 ```
 cd ~/dev/airline
 mongoimport --db airline --collection planes --type csv --headerline --file ./plane-data.csv
@@ -34,6 +38,9 @@ db.planes.update({tailnum:'XYZ1234'},{$set:{'comments':'My comments'}});
 db.planes.remove({tailnum: 'XYZ1234'});
 ```
 
+```
+db.airports.find()
+```
 ## Drop collections
 
 ```
