@@ -15,7 +15,7 @@ public class AirportController {
 	AirportRepositoryImpl repository;
 
 	@RequestMapping(value = "/airports", method = RequestMethod.GET)
-	public Airport findByTailnum(@Param("iata") String iata) {
+	public Airport findByIata(@Param("iata") String iata) {
 		return repository.findByIata(iata);
 	}
 }
